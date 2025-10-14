@@ -1,4 +1,4 @@
-# NutriTeen - Basic Version 
+# NutriTeen - Basic Version - Karthiga Raveenthiran
 # Iteration 1
 #Purpose: This first iteration establishes the foundational interface and basic navigation
 #between pages (Login, Signup, and Order.) The goal is to test layout structure and user flow.
@@ -146,3 +146,4 @@ class NutriTeenWindow:
 if __name__ == "__main__":
     app = NutriTeenWindow()
     app.mainloop()
+
