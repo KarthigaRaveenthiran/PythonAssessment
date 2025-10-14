@@ -52,7 +52,7 @@ class LoginPage(NavigationPage):
         ttk.Button(self.frame, text="Sign Up", command=self.go_back).grid(row=5, columnspan=2)
 
 
-# Signup Page
+#------Signup Page----------
 #This simulates account creation.
 #Currently provides a message confirmation only, no data storage.
 #Purpose: To test layout, navigation, and inital user feedback using messagebox popups.
@@ -146,4 +146,5 @@ class NutriTeenWindow:
 if __name__ == "__main__":
     app = NutriTeenWindow()
     app.mainloop()
+
 
