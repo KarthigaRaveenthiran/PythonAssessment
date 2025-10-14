@@ -326,7 +326,7 @@ class NutriTeenWindow:
 
 #------RUN PROGRAM-------
 #Entry point for program execution
-if __name__ == "__main__":
-    app = NutriTeenWindow()
-    app.mainloop()
+app = NutriTeenWindow()
+app.mainloop()
+
 
