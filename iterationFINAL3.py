@@ -42,14 +42,14 @@ prices = {
     "Avocado": 2.50,
     "Egg": 1.80,
 }
-#Defaul user data and order storage
+# Default user data and order storage
 user_list = {"guest": "guest"}
 order_history = {}
 user_name = "guest"
 
 # ---------- Reusable rounded blue button----------
 #Function returns a consistent-looking button for all pages
-#Supports consistency and reduced repetition of code.
+#Supports consistency and reduces repetition of code.
 def rounded_button(frame, text, command):
     return tk.Button(
         frame,
@@ -77,13 +77,13 @@ class NavigationPage:
         self.forward_page = forward_page
 
     def go_forward(self):
-        #Switches to next page
+        #Switches to the next page
         self.frame.grid_remove()
         self.forward_page.frame.grid()
         self.forward_page.showing()
 
     def go_back(self):
-        #Returns to previous page
+        #Returns to the previous page
         self.frame.grid_remove()
         self.back_page.frame.grid()
         self.back_page.showing()
@@ -209,7 +209,7 @@ class OrderPage(NavigationPage):
                                 command=lambda i=item: self.add_to_order(i))
                 btn.grid(row=3 + i // 3, column=i % 3, padx=5, pady=5)
             except Exception:
-                #If image file missing, text button still created.    
+                #If image file is missing, text button is still created.    
                 tk.Button(self.frame, text=f"{item}\n${prices[item]:.2f}",
                           font=("Segoe UI", 10),
                           command=lambda i=item: self.add_to_order(i)).grid(row=3 + i // 3, column=i % 3)
@@ -217,14 +217,14 @@ class OrderPage(NavigationPage):
         self.lb_orders = tk.Listbox(self.frame, width=45, height=14, font=("Segoe UI", 10))
         self.lb_orders.grid(column=5, columnspan=2, row=3, rowspan=5, padx=10)
         self.lb_orders.bind("<<ListboxSelect>>", self.remove_item)
-        #Running total lable updates
+        #Running total label updates
         self.total_label = tk.Label(self.frame, text="Total: $0.00",
                                     font=("Segoe UI Semibold", 12), fg="green", bg=BG_MAIN)
         self.total_label.grid(row=8, column=5, sticky="w", pady=5)
         #Action buttons
         rounded_button(self.frame, "Place Order", self.place_order).grid(row=9, column=5, pady=5)
         rounded_button(self.frame, "Logout", self.go_back).grid(row=9, column=0, pady=5)
-        #--Core functions controlling cart logic---
+        #------Core functions controlling cart logic------
     def add_to_order(self, item):
         self.orders[item] = self.orders.get(item, 0) + 1
         if self.orders[item] > 3:
@@ -328,5 +328,6 @@ class NutriTeenWindow:
 #Entry point for program execution
 app = NutriTeenWindow()
 app.mainloop()
+
 
 
