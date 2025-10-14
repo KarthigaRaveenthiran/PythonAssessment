@@ -89,6 +89,7 @@ class NavigationPage:
         self.back_page.showing()
 
     def showing(self):
+        print("Pass")
         pass
 
 
@@ -328,3 +329,4 @@ class NutriTeenWindow:
 if __name__ == "__main__":
     app = NutriTeenWindow()
     app.mainloop()
+
