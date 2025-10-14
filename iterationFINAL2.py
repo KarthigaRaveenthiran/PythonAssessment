@@ -1,4 +1,4 @@
-#NutriTeen Internal Assessment
+#NutriTeen Internal Assessment - Karthiga Raveenthiran 
 import tkinter as tk
 from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
@@ -264,3 +264,4 @@ class NutriTeenWindow:
 if __name__ == "__main__":
     app = NutriTeenWindow()
     app.mainloop()
+
