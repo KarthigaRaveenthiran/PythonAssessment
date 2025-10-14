@@ -24,7 +24,7 @@ menu = {
 }
 
 #User credentials and order history stored in dictionaries
-#Allows for quick data retrieval during the session
+#This allows for quick data retrieval during the session
 user_list = {"guest": "guest"}
 order_history = {}
 user_name = "guest"
@@ -49,7 +49,7 @@ class NavigationPage:
         self.back_page.showing()
 
     def showing(self):
-        pass #overriden by child classes when page content needs to be updated.
+        pass # overridden by child classes when page content needs to be updated.
 
 #----LOGIN PAGE ----- #
 #allows users to securely login or access as a guest.
@@ -167,7 +167,7 @@ class OrderPage(NavigationPage):
         ttk.Button(self.frame, text='Place Order', command=self.go_forward).grid(row=9, column=6)
 
     def order_command(self, item):
-        #Adds selected items in the user's order and serves limits for fillings (mirrors real world ordering apps)
+        #Adds selected items in the user's order and serves limits for fillings (mirrors real-world ordering apps)
         if item in self.orders:
             if self.orders[item] >= 3:
                 messagebox.showerror("Limit reached", f"Maximum 3 servings for {item}.")
@@ -264,4 +264,5 @@ class NutriTeenWindow:
 if __name__ == "__main__":
     app = NutriTeenWindow()
     app.mainloop()
+
 
